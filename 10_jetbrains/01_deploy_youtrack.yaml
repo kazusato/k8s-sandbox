@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: youtrack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: youtrack
+  template:
+    metadata:
+      name: youtrack
+      labels:
+        app: youtrack
+    spec:
+      containers:
+      - name: youtrack
+        image: jetbrains/youtrack:2018.1.41561
+        ports:
+        -  containerPort: 8080

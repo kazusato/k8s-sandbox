@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8sworkapp-aci
+spec:
+  containers:
+  - name: k8sworkapp
+    image: demoreg.azurecr.io/kazusato/k8sworkapp:0.1
+  imagePullSecrets:
+  - name: demoreg-reader3-secret
+  nodeSelector:
+    runtype: aci
+  tolerations:
+    - key: azure.com/aci
+      effect: NoSchedule
