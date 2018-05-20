@@ -1,0 +1,12 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: sobaorders.kazusato.local
+spec:
+  scope: Namespaced
+  group: kazusato.local
+  version: v1alpha1
+  names:
+    kind: SobaOrder
+    singular: sobaorder
+    plural: sobaorders

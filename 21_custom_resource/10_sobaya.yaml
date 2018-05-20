@@ -1,0 +1,6 @@
+apiVersion: kazusato.local/v1alpha1
+kind: Sobaya
+metadata:
+  name: yabusoba
+spec:
+  phone: +81-00-0000-0000
